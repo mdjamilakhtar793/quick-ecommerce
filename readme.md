@@ -29,33 +29,31 @@ a single platform.
 
 # 🏗️ Project Structure
 
-```
 src
 └── main
-    ├── java
-    │   └── com.jamildev
-    │       ├── config          # Spring Security & Application Configuration
-    │       ├── controller      # REST Controllers
-    │       ├── domain          # Entities / Domain Models
-    │       ├── dto             # Data Transfer Objects
-    │       ├── exception       # Custom Exceptions & Global Handlers
-    │       ├── mapper          # Entity ↔ DTO Mapping
-    │       ├── model           # Additional Models / Enums
-    │       ├── repository      # JPA Repositories
-    │       ├── request         # Request Models
-    │       ├── response        # Response Models
-    │       ├── service         # Business Logic
-    │       ├── utils           # Utility Classes
-    │       └── QuickecommerceApplication.java
-    │
-    └── resources
-        ├── application.properties
-        └── static
+├── java
+│ └── com.jamildev
+│ ├── config # Spring Security & Application Configuration
+│ ├── controller # REST Controllers
+│ ├── domain # Entities / Domain Models
+│ ├── dto # Data Transfer Objects
+│ ├── exception # Custom Exceptions & Global Handlers
+│ ├── mapper # Entity ↔ DTO Mapping
+│ ├── model # Additional Models / Enums
+│ ├── repository # JPA Repositories
+│ ├── request # Request Models
+│ ├── response # Response Models
+│ ├── service # Business Logic
+│ ├── utils # Utility Classes
+│ └── QuickecommerceApplication.java
+│
+└── resources
+├── application.properties
+└── static
 
 ---
 
 # 🏛️ Architecture
-
 
                 Client
                   │
@@ -70,7 +68,6 @@ src
                   │
                   ▼
              Database (MySQL)
-
 
 ---
 
@@ -186,7 +183,6 @@ LoginRequest
 
 Outgoing API response models.
 
-
 ProductResponse
 OrderResponse
 VendorResponse
@@ -217,7 +213,6 @@ Example:
 
 # ⚙️ Installation
 
-
 ---
 
 ## Configure Environment
@@ -226,10 +221,6 @@ Create:
 
 src/main/resources/application.properties
 
-
-Example:
-
-```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/quickcommerce
 spring.datasource.username=root
 spring.datasource.password=password
@@ -244,9 +235,7 @@ jwt.expiration=86400000
 
 ## Build Project
 
-```bash
 mvn clean install
----
 
 ## Run Project
 
@@ -256,9 +245,7 @@ or
 
 Run
 
-
 QuickecommerceApplication.java
-
 
 from your IDE.
 
@@ -269,7 +256,6 @@ from your IDE.
 The project uses JWT Authentication.
 
 Typical flow:
-
 
 Register
 │
@@ -357,6 +343,7 @@ This project is licensed under the MIT License.
 
 **Jamil Dev**
 
-GitHub: https://github.com/your-username
+GitHub: https://github.com/mdjamilakhtar793
+LinkedIn: https://www.linkedin.com/in/mdjamilakhtar786
 
 ⭐ If you found this project helpful, consider giving it a star!

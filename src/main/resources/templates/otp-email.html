@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container {
+            padding: 20px;
+            border: 1px solid #eee;
+            max-width: 500px;
+            margin: auto;
+        }
+        .otp {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d89ef;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Hello, <span th:text="${name}"></span> 👋</h2>
+    <p>Your One-Time Password (OTP) is:</p>
+
+    <p class="otp" th:text="${otp}"></p>
+
+    <p>This OTP is valid for <b>5 minutes</b>.</p>
+    <p>If you didn’t request this, ignore this email.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+# 🛒 Multi-Vendor QuickCommerce API
+
+A production-ready **Multi-Vendor E-Commerce REST API** built with **Spring Boot 3**, following a layered architecture and RESTful design principles.
+The platform enables multiple vendors to manage products, inventory, orders, and customers while providing secure authentication and scalable backend services.
+
+---
+
+## ✨ Key Features
+
+* 🔐 JWT Authentication & Role-Based Authorization
+* 🏪 Multi-Vendor Marketplace
+* 📦 Product & Inventory Management
+* 🛍️ Shopping Cart & Wishlist
+* 📂 Category Management
+* 📍 Customer Address Management
+* 📑 Order Processing
+* ⭐ Product Reviews & Ratings
+* 📊 Vendor Dashboard APIs
+* 🚚 Delivery Tracking Support
+* ⚠️ Global Exception Handling
+* 🔄 DTO Mapping & Validation
+* 🌐 RESTful API Architecture
+
+---
+
+## 🏗️ Architecture
+
+Client
+   │
+   ▼
+REST Controllers
+   │
+   ▼
+Service Layer
+   │
+   ▼
+Repository Layer
+   │
+   ▼
+MySQL Database
+
+---
+
+## 📁 Project Structure
+
+src/main/java/com/jamildev
+├── config          # Security & application configuration
+├── controller      # REST API endpoints
+├── domain          # JPA entities
+├── dto             # Data Transfer Objects
+├── exception       # Global exception handling
+├── mapper          # Entity ↔ DTO mapping
+├── model           # Domain models & enums
+├── repository      # Spring Data JPA repositories
+├── request         # Request models
+├── response        # Response models
+├── service         # Business logic
+├── utils           # Utility classes
+└── QuickecommerceApplication.java
+
+---
+
+## 🛠️ Technology Stack
+
+| Technology         | Version   |
+| ------------------ | --------- |
+| Java               | 17+       |
+| Spring Boot        | 3.x       |
+| Spring Security    | JWT       |
+| Spring Data JPA    | Hibernate |
+| MySQL              | 8+        |
+| Maven              | Latest    |
+| Lombok             | ✔         |
+| MapStruct / Mapper | ✔         |
+
+
+## 🚀 Getting Started
+
+### Configure the Application
+
+Create:
+
+src/main/resources/application.properties
+
+
+spring.datasource.url=jdbc:mysql://localhost:3306/quickcommerce
+spring.datasource.username=root
+spring.datasource.password=your_password
+
+spring.jpa.hibernate.ddl-auto=update
+
+jwt.secret=your_secret_key
+jwt.expiration=86400000
+
+> **Security Notice:** Never commit `application.properties`. Use `application.properties.example` as a template and add the actual configuration file to `.gitignore`.
+
+### Build
+
+mvn clean install
+
+### Run
+
+mvn spring-boot:run
+
+or start `QuickecommerceApplication.java` directly from your IDE.
+
+---
+
+## 🔐 Authentication
+
+The API uses **JWT Bearer Authentication**.
+
+Authentication Flow:
+
+Register
+     │
+     ▼
+ Login
+     │
+     ▼
+ Receive JWT Token
+     │
+     ▼
+Authorization: Bearer <JWT_TOKEN>
+
+---
+
+## 📌 Sample API Endpoints
+
+| Method | Endpoint             | Description         |
+| ------ | -------------------- | ------------------- |
+| POST   | `/api/auth/register` | Register a new user |
+| POST   | `/api/auth/login`    | Authenticate user   |
+| GET    | `/api/products`      | Retrieve products   |
+| POST   | `/api/products`      | Create a product    |
+| GET    | `/api/orders`        | Retrieve orders     |
+| POST   | `/api/orders`        | Place an order      |
+
+---
+
+## 📂 Layer Responsibilities
+
+| Package      | Responsibility                                  |
+| ------------ | ----------------------------------------------- |
+| `config`     | Security, JWT, CORS & application configuration |
+| `controller` | REST API endpoints                              |
+| `service`    | Business logic                                  |
+| `repository` | Database access layer                           |
+| `domain`     | JPA entities                                    |
+| `dto`        | Data Transfer Objects                           |
+| `mapper`     | Entity/DTO conversions                          |
+| `request`    | Incoming request models                         |
+| `response`   | API response models                             |
+| `exception`  | Global exception handling                       |
+| `utils`      | Common helper utilities                         |
+
+---
+
+## 🧪 Running Tests
+
+mvn test
+
+---
+
+## 📈 Roadmap
+
+* Docker & Docker Compose
+* Redis Caching
+* Elasticsearch Integration
+* Payment Gateway Integration
+* Email & SMS Notifications
+* Swagger / OpenAPI Documentation
+* Kubernetes Deployment
+* CI/CD Pipeline
+* Monitoring with Prometheus & Grafana
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes.
+4. Push the branch.
+5. Open a Pull Request.
+
+---
+
+## 📄 License
+
+Distributed under the **MIT License**.
+
+---
+
+## 👨‍💻 Author
+
+**Jamil Dev**
+
+* GitHub: https://github.com/your-username
+* LinkedIn: https://linkedin.com/in/your-profile *(optional)*
+
+---
+
+⭐ If you find this project useful, consider giving it a **Star** to support the project.
